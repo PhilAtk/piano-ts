@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+		"target": "es2016",
+		"module": "None",
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"strict": true,
+		"skipLibCheck": true,
+		"removeComments": true,
+		"outFile": "script/piano.js"
+	}
+}
