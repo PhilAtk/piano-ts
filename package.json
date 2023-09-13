@@ -1,5 +1,9 @@
 {
-  "devDependencies": {
-    "@types/webmidi": "^2.0.7"
-  }
+	"scripts": {
+		"build": "tsc"
+	},
+	"devDependencies": {
+		"@types/webmidi": "^2.0.7",
+		"typescript": "^5.2.2"
+	}
 }

@@ -7,6 +7,6 @@
 		"strict": true,
 		"skipLibCheck": true,
 		"removeComments": true,
-		"outFile": "script/piano.js"
+		"outFile": "js/piano.js"
 	}
 }

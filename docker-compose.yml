@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+    piano:
+        container_name: piano
+        image: piano
+        build:
+            context: .
+            dockerfile: dockerfile
+        restart: always
+        ports:
+            - "8080:8080" 

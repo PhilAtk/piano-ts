@@ -1,3 +1,5 @@
+# Packages
 node_modules
 
-script
+# Build artifacts
+js
