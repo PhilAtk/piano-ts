@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Transpile typescript
+        uses: actions/setup-node@v3
+      - run: |
+          npm install
+          npx tsc
+
+      - name: Prepare Build Artifacts
+        run: |
+          mkdir dist/js -p
+          cp index.html dist/index.html
+          cp js/piano.js dist/js/piano.js
+          cd dist
+          git init
+          git add -A
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m 'deploy'
+
+      - name: Publish build artifacts
+        uses: ad-m/github-push-action@v0.8.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          force: true
+          directory: ./dist
