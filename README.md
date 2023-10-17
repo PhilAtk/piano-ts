@@ -9,6 +9,8 @@ Do note that, by default, Firefox requires an addon to run WebMIDI on locally se
 
 After the page has loaded, select your desired MIDI input device from the dropdown list. If you do not see your device, make sure it is connected, and press "Refresh MIDI Device List" on the page.
 
+Try it out on the [Github Page](https://philatk.github.io/piano-ts/)
+
 ## How to Use
 PianoTS is currently intended to be run as a single page application. To build, simply clone the repository, then run:
 ```
